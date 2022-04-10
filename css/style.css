@@ -1,0 +1,408 @@
+/*==============================================================================================
+    GENERAL
+==============================================================================================*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header, footer {
+  background: #212121;
+  padding: 20px 35px;
+  color: #F5F5F5;
+}
+
+/*==============================================================================================
+    HEADER
+==============================================================================================*/
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .logo {
+  font-size: 24px;
+  padding: 10px 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 3px solid #E91E63;
+}
+
+header .logo img {
+  display: inline;
+  height: 22px;
+  width: auto;
+}
+
+header .logo p {
+  display: inline;
+}
+
+header .nav a {
+  color: #F5F5F5;
+  text-decoration: none;
+  -webkit-transition: 0.2s all ease;
+  transition: 0.2s all ease;
+  padding: 0 15px;
+}
+
+header .nav a:active, header .nav a:focus {
+  outline: 0;
+  border: none;
+}
+
+header .nav a:hover {
+  color: #E91E63;
+}
+
+/*==============================================================================================
+    MAIN
+==============================================================================================*/
+main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background: #E91E63;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main > * {
+  margin-top: 0 !important;
+}
+
+main > *:first-child {
+  margin-top: 30px !important;
+}
+
+main .container, main .formContainer {
+  background: #F5F5F5;
+  border: 5px solid #212121;
+  padding: 30px;
+  margin: 30px;
+}
+
+main .container h2, main .formContainer h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+main .container .infoLink, main .formContainer .infoLink {
+  text-decoration: none;
+  color: #E91E63;
+  font-weight: bold;
+  font-style: italic;
+}
+
+main .container .rwelcome, main .formContainer .rwelcome {
+  text-align: center;
+}
+
+main .container .reservations, main .formContainer .reservations {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-top: 15px;
+}
+
+main .container .reservations .reservation, main .formContainer .reservations .reservation {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 22%;
+          flex: 0 0 22%;
+  text-align: center;
+  border: solid 5px #212121;
+  background: #FFF;
+  margin: 15px;
+  padding: 15px;
+}
+
+main .container .reservations .reservation h4, main .formContainer .reservations .reservation h4 {
+  color: #E91E63;
+}
+
+main .container .seatInfo, main .formContainer .seatInfo {
+  text-align: center;
+}
+
+main .container .seatInfo span, main .formContainer .seatInfo span {
+  font-weight: bold;
+}
+
+main .container #seat-table, main .formContainer #seat-table {
+  margin: 30px auto;
+  border-spacing: 5px;
+}
+
+main .container #seat-table .seatLabel, main .formContainer #seat-table .seatLabel {
+  font-weight: bold;
+  text-align: center;
+}
+
+main .container #seat-table .seat, main .formContainer #seat-table .seat {
+  width: 30px;
+  height: 30px;
+  margin: 50px;
+  border: 2px solid #212121;
+  background: #FFF;
+  -webkit-transition: 0.2s all ease;
+  transition: 0.2s all ease;
+}
+
+main .container #seat-table .selected, main .formContainer #seat-table .selected {
+  background: #03A9F4;
+}
+
+main .container #seat-table .taken, main .formContainer #seat-table .taken {
+  background: #E91E63;
+}
+
+main .container .seatTypes, main .formContainer .seatTypes {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+main .container .seatTypes p, main .formContainer .seatTypes p {
+  display: inline;
+  margin-right: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+main .container .seatTypes p::before, main .formContainer .seatTypes p::before {
+  display: inline-block;
+  margin-right: 5px;
+  content: '';
+  width: 10px;
+  height: 10px;
+  border: 2px solid #212121;
+  background: #FFF;
+}
+
+main .container .seatTypes .selected::before, main .formContainer .seatTypes .selected::before {
+  background: #03A9F4;
+}
+
+main .container .seatTypes .taken::before, main .formContainer .seatTypes .taken::before {
+  background: #E91E63;
+}
+
+main .movie {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 5px solid #212121;
+  margin: 30px;
+}
+
+main .movie .image {
+  padding: 25px;
+  background: #212121;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .movie .image img {
+  border: 5px solid #F5F5F5;
+  width: 100%;
+  height: auto;
+}
+
+main .movie .info {
+  -webkit-box-flex: 8;
+      -ms-flex: 8;
+          flex: 8;
+  padding: 15px;
+}
+
+main .movie .info h3 {
+  text-transform: uppercase;
+  margin: 15px 0;
+}
+
+main .movie .info .seances {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0 0 15px 0;
+}
+
+main .movie .info form {
+  margin: 10px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 22%;
+          flex: 0 0 22%;
+  border: 5px solid #E91E63;
+  background: #FFF;
+  text-align: center;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+}
+
+main .movie .info form:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+main .movie .info form input {
+  width: 100%;
+  height: 100%;
+  padding: 15px 0;
+  font-weight: bold;
+  font-size: 16px;
+  background: none;
+  border: none;
+  -webkit-transition: 0.1s ease-in all;
+  transition: 0.1s ease-in all;
+}
+
+main .movie .info form input:active, main .movie .info form input:focus {
+  outline: 0;
+  border: none;
+}
+
+main .movie .info .noseances {
+  padding-left: 15px;
+  color: #E91E63;
+  font-weight: bold;
+}
+
+main .message {
+  text-align: center;
+  background: #F5F5F5;
+  border: 5px solid #212121;
+  padding: 20px;
+  margin: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+main .message .success {
+  color: #03A9F4;
+}
+
+main .message .error {
+  color: #E91E63;
+}
+
+main .formContainer textarea {
+  resize: none;
+}
+
+main .formContainer input, main .formContainer textarea {
+  background: #FFF;
+  display: block;
+  border: 2px solid #212121;
+  padding: 10px 15px;
+  margin: 20px auto;
+  font-size: 14px;
+  width: 70%;
+}
+
+main .formContainer .inpCont {
+  background: #FFF;
+  display: block;
+  border: 2px solid #212121;
+  padding: 10px 15px;
+  margin: 20px auto;
+  font-size: 14px;
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+main .formContainer .inpCont * {
+  display: inline;
+}
+
+main .formContainer .inpCont p {
+  padding-right: 15px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+main .formContainer .inpCont input, main .formContainer .inpCont select {
+  -webkit-box-flex: 8;
+      -ms-flex: 8;
+          flex: 8;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  width: auto;
+  padding: 0;
+  margin: 0;
+}
+
+main .formContainer input[type="submit"] {
+  background: #FFF;
+  -webkit-transition: 0.2s all ease;
+  transition: 0.2s all ease;
+  font-weight: bold;
+  width: 25%;
+}
+
+main .formContainer input[type="submit"]:hover, main .formContainer input[type="submit"]:active {
+  background: #E91E63;
+}
+
+/*==============================================================================================
+    FOOTER
+==============================================================================================*/
+footer {
+  text-align: center;
+  font-size: 14px;
+}
+/*# sourceMappingURL=style.css.map */

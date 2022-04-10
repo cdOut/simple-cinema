@@ -1,0 +1,352 @@
+/*==============================================================================================
+    GENERAL
+==============================================================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+header, footer {
+    background: #212121;
+    padding: 20px 35px;
+    color: #F5F5F5;
+}
+
+/*==============================================================================================
+    HEADER
+==============================================================================================*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+        font-size: 24px;
+        padding: 10px 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+        border: 3px solid #E91E63;
+
+        img {
+            display: inline;
+            height: 22px;
+            width: auto;
+        }
+
+        p {
+            display: inline;
+        }
+    }
+
+    .nav {
+        a {
+            color: #F5F5F5;
+            text-decoration: none;
+            transition: 0.2s all ease;
+            padding: 0 15px;
+            
+            &:active, &:focus {
+                outline: 0;
+                border: none;
+            }
+
+            &:hover {
+                color: #E91E63;
+            }
+        }
+    }
+}
+
+/*==============================================================================================
+    MAIN
+==============================================================================================*/
+
+main {
+    flex: 1;
+    background: #E91E63;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    & > * {
+        margin-top: 0 !important;
+    }
+
+    & > *:first-child {
+        margin-top: 30px !important;
+    }
+
+    .container, .formContainer {
+        background: #F5F5F5;
+        border: 5px solid #212121;
+        padding: 30px;
+        margin: 30px;
+
+        h2 {
+            text-align: center;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .infoLink {
+            text-decoration: none;
+            color: #E91E63;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        .rwelcome {
+            text-align: center;
+        }
+
+        .reservations {
+            display: flex;
+            flex-wrap: wrap;
+            padding-top: 15px;
+
+            .reservation {
+                flex: 0 0 22%;
+                text-align: center;
+
+                border: solid 5px #212121;
+                background: #FFF;
+                margin: 15px;
+                padding: 15px;
+
+                h4 {
+                    color: #E91E63;
+                }
+            }
+        }
+
+        .seatInfo {
+            text-align: center;
+
+            span {
+                font-weight: bold;
+            }
+        }
+
+        #seat-table {
+            margin: 30px auto;
+            border-spacing: 5px;
+
+            .seatLabel {
+                font-weight: bold;
+                text-align: center;
+            }
+
+            .seat {
+                width: 30px;
+                height: 30px;
+                margin: 50px;
+                border: 2px solid #212121;
+                background: #FFF;
+                transition: 0.2s all ease;
+            }
+
+            .selected {
+                background: #03A9F4;
+            }
+
+            .taken {
+                background: #E91E63;
+            }
+        }
+
+        .seatTypes {
+            width: fit-content;
+            margin: 0 auto;
+            p {
+                display: inline;
+                margin-right: 25px;
+                font-weight: bold;
+                text-transform: uppercase;
+
+                &::before {
+                    display: inline-block;
+                    margin-right: 5px;
+                    content: '';
+                    width: 10px;
+                    height: 10px;
+                    border: 2px solid #212121;
+                    background: #FFF;
+                }
+            }
+
+            .selected::before {
+                background: #03A9F4;
+            }
+
+            .taken::before {
+                background: #E91E63;
+            }
+        }
+    }
+
+    .movie {
+        display: flex;
+        border: 5px solid #212121;
+        margin: 30px;
+
+        .image {
+            padding: 25px;
+            background: #212121;
+            flex: 2;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                border: 5px solid #F5F5F5;
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .info { 
+            flex: 8;
+            padding: 15px;
+
+            h3 {
+                text-transform: uppercase;
+                margin: 15px 0;
+            }
+
+            .seances {
+                display: flex;
+                flex-wrap: wrap;
+                padding: 0 0 15px 0;
+            }
+
+            form {
+                margin: 10px;
+                flex: 0 0 22%;
+                border: 5px solid #E91E63;
+                background: #FFF;
+                text-align: center;
+                transition: all ease 0.2s;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+
+                input {
+                    width: 100%;
+                    height: 100%;
+                    padding: 15px 0;
+                    font-weight: bold;
+                    font-size: 16px;
+                    background: none;
+                    border: none;
+                    transition: 0.1s ease-in all;
+
+                    &:active, &:focus {
+                        outline: 0;
+                        border: none;
+                    }
+                }
+            }
+
+            .noseances {
+                padding-left: 15px;
+                color: #E91E63;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .message {
+        text-align: center;
+        background: #F5F5F5;
+        border: 5px solid #212121;
+        padding: 20px;
+        margin: 30px;
+
+        font-weight: bold;
+        text-transform: uppercase;
+
+        .success {
+            color: #03A9F4;
+        }
+
+        .error {
+            color: #E91E63;
+        }
+    }
+
+    .formContainer {    
+        textarea { resize: none; }
+    
+        input, textarea {
+            background: #FFF;
+            display: block;
+            border: 2px solid #212121;
+            padding: 10px 15px;
+            margin: 20px auto;
+            font-size: 14px;
+            width: 70%;
+        }
+    
+        .inpCont {
+            background: #FFF;
+            display: block;
+            border: 2px solid #212121;
+            padding: 10px 15px;
+            margin: 20px auto;
+            font-size: 14px;
+            width: 70%;
+
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+    
+            * { display: inline; }
+            p { padding-right: 15px; flex: 1; }
+            
+            input, select { 
+                flex: 8;
+                font-weight: bold;
+                text-align: center;
+                border: none;
+                width: auto;
+                padding: 0;
+                margin: 0;
+            }
+        }
+    
+        input[type="submit"] {
+            background: #FFF;
+            transition: 0.2s all ease;
+            font-weight: bold;
+            width: 25%;
+    
+            &:hover, &:active {
+                background: #E91E63;
+            }
+        }
+    }
+}
+
+/*==============================================================================================
+    FOOTER
+==============================================================================================*/
+
+footer {
+    text-align: center;
+    font-size: 14px;
+}
